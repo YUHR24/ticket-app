@@ -12,11 +12,21 @@ class _BottomNavBarState extends State<BottomNavBar> {
 
   // List is iterated using index 
   var appScreens = [
-    const Text('Home'), 
-    const Text('Search'), 
-    const Text('Tickets'), 
-    const Text('Profile'), 
+    const Center(child: Text('Home')), 
+    const Center(child: Text('Search')), 
+    const Center(child: Text('Tickets')), 
+    const Center(child: Text('Profile')), 
   ];
+
+  // Change our index for BottoNavbar
+  int _selectIndex = 0;
+
+  void _onItemTapped(int index) {
+    setState(() {
+    _selectIndex = index;
+    });
+    // print('Tapped index is $_selectIndex');
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -26,8 +36,10 @@ class _BottomNavBarState extends State<BottomNavBar> {
         title: const Text('My Tickets'),
         centerTitle: true,
       ),
-      body: appScreens[0],
+      body: appScreens[_selectIndex],
         bottomNavigationBar: BottomNavigationBar(
+          currentIndex: _selectIndex,
+          onTap: _onItemTapped,
           selectedItemColor: Colors.blueGrey,
           unselectedItemColor: const Color(0xFF526400),
           showSelectedLabels: false,
