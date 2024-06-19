@@ -12,7 +12,7 @@ class BottomNavBar extends StatefulWidget {
 class _BottomNavBarState extends State<BottomNavBar> {
 
   // List is iterated using index 
-  var appScreens = [
+  /* List<Widget> */ var appScreens = [
     const HomeScreen(), 
     const Center(child: Text('Search')), 
     const Center(child: Text('Tickets')), 
@@ -32,11 +32,11 @@ class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        // backgroundColor: Colors.deepPurpleAccent[200],
-        title: const Text('My Tickets'),
-        centerTitle: true,
-      ),
+      // appBar: AppBar(
+      //   // backgroundColor: Colors.deepPurpleAccent[200],
+      //   title: const Text('My Tickets'),
+      //   centerTitle: true,
+      // ),
       body: appScreens[_selectIndex],
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: _selectIndex,
