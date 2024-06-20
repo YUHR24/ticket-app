@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:ticket_app/base/resources/media.dart';
 import 'package:ticket_app/base/resources/styles/app_styles.dart';
 import 'package:ticket_app/base/widgets/app_double_text.dart';
+import 'package:ticket_app/base/widgets/ticket_view.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -18,7 +19,7 @@ class HomeScreen extends StatelessWidget {
         // Scrollable Effect
         body: ListView(
           children: [
-            const SizedBox(height: 40,),
+            const SizedBox(height: 40),
             Container(
               // color: Colors.blue,
               padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -69,7 +70,9 @@ class HomeScreen extends StatelessWidget {
                   const SizedBox(height: 25),
                   const AppDoubleText(bigText: 'Upcoming Flights', smallText: 'View All'),
                   const SizedBox(height: 25),
-                  const AppDoubleText(bigText: 'Upcoming Meetings', smallText: 'View All')
+                  const TicketView(),
+                  const SizedBox(height: 25),
+                  const AppDoubleText(bigText: 'Hotels', smallText: 'View All'),
                 ],
               ),
             )
