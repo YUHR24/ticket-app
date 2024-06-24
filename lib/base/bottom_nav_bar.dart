@@ -33,7 +33,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       // appBar: AppBar(
-      //   // backgroundColor: Colors.deepPurpleAccent[200],
+      // backgroundColor: Colors.deepPurpleAccent[200],
       //   title: const Text('My Tickets'),
       //   centerTitle: true,
       // ),
